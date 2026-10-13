@@ -1,8 +1,44 @@
-name: build
-on: [push]
+name: Build WireCut App
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
 jobs:
- build:
-  runs-on: ubuntu-latest
-  steps:
-   - uses: actions/checkout@v4
-   - run: echo WireCut build ready
+  build:
+    name: Build WireCut
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+
+      - name: Install dependencies
+        run: npm install
+
+
+      - name: Build web app
+        run: npm run build
+
+
+      - name: Capacitor sync
+        run: npx cap sync
+
+
+      - name: Upload project
+        uses: actions/upload-artifact@v4
+        with:
+          name: WireCut-build
+          path: .
