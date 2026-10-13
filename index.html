@@ -1,1 +1,40 @@
-<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>WireCut</title><link rel="stylesheet" href="style.css"></head><body><div id="app"><h1>WireCut</h1><div id="clock"></div><div class="cards"><div class="card">Started<br><b id="started">0</b> m</div><div class="card">Added<br><b id="added">0</b> m</div><div class="card">Cut<br><b id="cut">0</b> m</div><div class="card">Used<br><b id="used">0</b> m</div></div><div class="current">Current Length<br><strong id="length">0.00</strong> m</div><div id="pad"></div></div><script src="app.js"></script></body></html>
+<!doctype html>
+<html><head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WireCut</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+<div class="app">
+<header><div id="clock">00:00</div><button id="menu">⋮</button></header>
+
+<div class="cards">
+<div class="card" data-key="started">Started<h2 id="started">0.00</h2></div>
+<div class="card" data-key="added">Added<h2 id="added">0.00</h2></div>
+<div class="card" data-key="cut">Cut<h2 id="cut">0.00</h2></div>
+<div class="card"><h2>Used</h2><h2 id="used">0.00</h2></div>
+</div>
+
+<section class="current">Current Length<br><strong id="length">0.00</strong> m</section>
+
+<div class="actions">
+<button class="prev">← Prev Cut</button>
+<button class="next">Next Cut →</button>
+</div>
+
+<div class="keypad">
+<button>7</button><button>8</button><button>9</button>
+<button>4</button><button>5</button><button>6</button>
+<button>1</button><button>2</button><button>3</button>
+<button>.</button><button>0</button><button class="eq">=</button>
+</div>
+
+<div>
+<button id="export">Export CSV</button>
+<input id="import" type="file" accept=".csv">
+</div>
+</div>
+<script src="app.js"></script>
+<script>navigator.serviceWorker?.register("sw.js")</script>
+</body></html>
