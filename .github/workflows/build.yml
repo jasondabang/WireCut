@@ -30,7 +30,7 @@ jobs:
       - name: Capacitor sync
         run: npx cap sync
 
-            - name: Upload WireCut artifact
+      - name: Upload WireCut artifact
         uses: actions/upload-artifact@v5
         with:
           name: WireCut-build
