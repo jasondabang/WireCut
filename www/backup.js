@@ -1,1 +1,0 @@
-function exportBackup(){let b=new Blob([localStorage.getItem('cordData')||'{}']);let a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='cord-backup.json';a.click()}
