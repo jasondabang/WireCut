@@ -6,15 +6,19 @@ justify-content:center;
 position:relative;
 }
 
-#clock{
+clock{
 font-size:64px;
 font-weight:900;
 }
 
-#menu{
+menu{
 position:absolute;
 right:10px;
 top:10px;
 font-size:40px;
 background:none;
+}
+.keypad button{
+height:55px;
+font-size:28px;
 }
