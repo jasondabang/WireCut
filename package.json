@@ -1,0 +1,13 @@
+{
+"name":"cord-calculator",
+"version":"1.0.0",
+"scripts":{
+"build":"echo ready"
+},
+"dependencies":{
+"@capacitor/core":"latest"
+},
+"devDependencies":{
+"@capacitor/cli":"latest"
+}
+}
