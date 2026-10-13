@@ -30,12 +30,10 @@ jobs:
       - name: Capacitor sync
         run: npx cap sync
 
-      - name: Upload build files
-        uses: actions/upload-artifact@v4
+            - name: Upload WireCut artifact
+        uses: actions/upload-artifact@v5
         with:
           name: WireCut-build
           path: |
-            www
-            dist
-            capacitor.config.json
-            package.json
+            .
+          if-no-files-found: error
