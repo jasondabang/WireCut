@@ -1,1 +1,6 @@
-{"name":"Cord Calculator","short_name":"CordCalc","display":"standalone","start_url":"www/index.html"}
+{
+  "name": "WireCut",
+  "short_name": "WireCut",
+  "display": "standalone",
+  "start_url": "www/index.html"
+}
