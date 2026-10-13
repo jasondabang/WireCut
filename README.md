@@ -1,4 +1,4 @@
-# Cord Calculator App
+# WireCut App
 
 Offline-first mobile app project.
 
