@@ -1,6 +1,1 @@
-{
-  "appId": "com.wirecut.app",
-  "appName": "WireCut",
-  "webDir": "dist",
-  "bundledWebRuntime": false
-}
+{"appId": "com.wirecut.app", "appName": "WireCut", "webDir": "www"}
