@@ -1,6 +1,1 @@
-{
-  "name": "WireCut",
-  "short_name": "WireCut",
-  "display": "standalone",
-  "start_url": "www/index.html"
-}
+{"name":"WireCut","short_name":"WireCut","display":"standalone","start_url":"./index.html","background_color":"#f5f7fa","theme_color":"#f59e0b"}
