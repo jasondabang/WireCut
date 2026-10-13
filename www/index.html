@@ -1,37 +1,40 @@
 <!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
+<html><head>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>WireCut</title>
 <link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
 </head>
 <body>
-<header><div id="clock">00:00</div><button>⋮</button></header>
-<section class="cards">
-<div>Started<br><b id="started">0.00</b></div>
-<div>Added<br><b id="added">0.00</b></div>
-<div>Cut<br><b id="cut">0.00</b></div>
-<div>Used<br><b id="used">0.00</b></div>
-</section>
-<section class="current">Current Length (m)<h1 id="current">0.00</h1></section>
-<div class="nav"><button>‹ Prev Cut</button><button>Next Cut ›</button></div>
-<div class="keys">
+<div class="app">
+<header><div id="clock">00:00</div><button id="menu">⋮</button></header>
+
+<div class="cards">
+<div class="card" data-key="started">Started<h2 id="started">0.00</h2></div>
+<div class="card" data-key="added">Added<h2 id="added">0.00</h2></div>
+<div class="card" data-key="cut">Cut<h2 id="cut">0.00</h2></div>
+<div class="card"><h2>Used</h2><h2 id="used">0.00</h2></div>
+</div>
+
+<section class="current">Current Length<br><strong id="length">0.00</strong> m</section>
+
+<div class="actions">
+<button class="prev">← Prev Cut</button>
+<button class="next">Next Cut →</button>
+</div>
+
+<div class="keypad">
 <button>7</button><button>8</button><button>9</button>
 <button>4</button><button>5</button><button>6</button>
 <button>1</button><button>2</button><button>3</button>
-<button>0</button><button id="equal">=</button>
+<button>.</button><button>0</button><button class="eq">=</button>
 </div>
-<select>
-<option>0. = Calculate</option>
-<option>1. Addition</option>
-<option>2. Subtraction</option>
-<option>3. Multiplication</option>
-<option>4. Division</option>
-</select>
-<script src="database.js"></script>
-<script src="backup.js"></script>
-<script src="sync.js"></script>
+
+<div>
+<button id="export">Export CSV</button>
+<input id="import" type="file" accept=".csv">
+</div>
+</div>
 <script src="app.js"></script>
-</body>
-</html>
+<script>navigator.serviceWorker?.register("sw.js")</script>
+</body></html>
